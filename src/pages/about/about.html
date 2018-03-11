@@ -1,11 +1,49 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
-  </ion-navbar>
+  <ion-toolbar >
+    <ion-title>Ionic Event</ion-title>
+    <button  ion-button menuToggle right>
+      <ion-icon name="settings"></ion-icon>
+    </button>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <!-- <ion-list>
+    <ion-list-header>Follow us on Twitter</ion-list-header>
+    <ion-item>
+      <ion-icon name="ionic" item-start></ion-icon>
+      @ionicframework
+    </ion-item>
+  </ion-list> -->
 
+  <ion-card *ngFor="let person of people">
+    
+        <ion-card-content no-padding>
+          <ion-item>
+          <ion-card-title style="max-width: 25rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis "  item-start>
+            {{person.crop}}  
+          </ion-card-title>
+          <button ion-button (click)='showConfirm(person)'>등록 취소</button>
+          <a item-end href = {{person.link}}>링크</a>
+        </ion-item>
+        
+        </ion-card-content>
+        <ion-item>
+        <p text-wrap>
+            {{person.title}}
+          </p>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='musical-notes' item-start style="color: #d03e84"></ion-icon>
+          종료일
+          <ion-badge item-end>{{person.lastday}}</ion-badge><ion-badge item-end style="background-color: red">{{person.betweenDay}}</ion-badge>
+        </ion-item>
+    
+        <ion-item>
+          <ion-icon name='logo-twitter' item-start style="color: #55acee"></ion-icon>
+          당첨날짜
+          <ion-badge item-end>{{person.winday}}</ion-badge>
+        </ion-item>
+    
+      </ion-card>
 </ion-content>

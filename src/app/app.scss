@@ -14,3 +14,27 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+@font-face{
+    font-family: Pac;
+    src: url('../assets/fonts/BMKIRANGHAERANG-TTF.ttf')
+}
+
+@font-face{
+    font-family: BMYEONSUNG_ttf;
+    src: url('../assets/fonts/BMYEONSUNG_ttf.ttf')
+}
+
+@font-face{
+    font-family: Inconsolata-Bold;
+    src: url('../assets/fonts/Inconsolata-Bold.ttf')
+}
+
+@font-face{
+    font-family: Inconsolata-Regular;
+    src: url('../assets/fonts/Inconsolata-Regular.ttf')
+}
+
+*{
+    font-family: BMYEONSUNG_ttf;
+}

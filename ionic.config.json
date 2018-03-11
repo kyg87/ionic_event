@@ -1,5 +1,8 @@
 {
-  "name": "ionic event",
-  "app_id": "",
-  "type": "ionic-angular"
+  "name": "whykiki.event.push",
+  "app_id": "whykiki.event.push",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <div style="display: flex">
+      <ion-select [(ngModel)]="instarId" (ionChange)="onSelectID()">
+          <ion-option  *ngFor="let insta of instaList; let idx = index" value="{{insta.instaId}}" selected="{{(idx==0).toString()}}">
+              {{insta.instaId}}
+          </ion-option>
+      </ion-select>
+    <ion-title style="text-align: center; width: 30px;" >{{people.title}}</ion-title>
+    <button ion-button menuToggle right (click)="reload()"><ion-icon name="settings"></ion-icon></button>
+  </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="card-background-page">
+  <!-- <ion-card *ngFor="let person of people">
+      <div class="card-title">{{person.title}}</div>
+    <div *ngFor="let img of person?.imgs">
+      <img src="{{img.src}}"/>
+    </div>
+    
+    <div class="card-subtitle">41 Listings</div> -->
+  <!-- </ion-card> --> 
+
+  <ion-card *ngFor="let img of people.imgs">
+      <a href="{{img.src}}"><img src="{{img.src}}" /></a>
+  </ion-card>
+
+
+  <video  *ngIf="people.mp4 != ''" style="width: 100%; height: 100%;" autoplay="autoplay" src = "{{people.mp4}}" controls >
+  </video>
+
+   <!-- <video controls="controls" preload="metadata" autoplay="autoplay" webkit-playsinline="webkit-playsinline" class="videoPlayer">
+     <source src="{{people.mp4}}" type="video/mp4"/>
+    </video> -->
+</ion-content>
+<ion-footer>
+    <ion-toolbar>
+    
+      <ion-buttons left>
+        <button ion-button icon-only color="royal" (click)='loadEvent(-1)'>
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title style="text-align: center;">{{people.instaId}}</ion-title>
+      <ion-buttons right>
+        <button ion-button icon-only color="royal" (click)='loadEvent(1)'>
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+    
+    </ion-toolbar>
+  </ion-footer>
