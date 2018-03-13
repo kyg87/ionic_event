@@ -24,7 +24,7 @@
   <ion-card *ngFor="let img of people.imgs">
       <a href="{{img.src}}"><img src="{{img.src}}" /></a>
   </ion-card>
-
+  <button><a href="{{people.videoLink}}">{{people.videoLink}}</a></button>
 
   <video  *ngIf="people.mp4 != ''" style="width: 100%; height: 100%;" autoplay="autoplay" src = "{{people.mp4}}" controls >
   </video>

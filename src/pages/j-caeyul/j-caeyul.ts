@@ -141,7 +141,7 @@ export class JCaeyulPage {
 
     });
 
-    return this.http.delete('http://125.129.60.150:3000/api/he_le_n_/hatsuneyuko', this._requestoptions).map(res => res.json()).subscribe(
+    return this.http.delete('http://125.129.60.150:3000/api/he_le_n_/pinterest', this._requestoptions).map(res => res.json()).subscribe(
       data => this.onCompleteGetEvent(data),
       error => {
         alert("등록에러 : " + JSON.stringify(error))
