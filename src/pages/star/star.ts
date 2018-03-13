@@ -52,7 +52,6 @@ export class StarPage {
 
     headers.append('Content-Type', 'application/json');
 
-
     this._requestoptions = new RequestOptions({
 
       headers: headers
@@ -68,8 +67,6 @@ export class StarPage {
   }
 
   onCompleteGetEvent(data) {
-    
-
     this.people = data.value[0];
     console.log(this.people)
     // infiniteScroll.enable(false);

@@ -35,7 +35,12 @@ export class VotePage {
     if(this.autoManufacturers == undefined){
       alert('선택해주세요');
     }
-    
+  }
+
+  reload(){
+    this.page = 1;
+    this.people.length = 0;
+    this.loadEvent(0);
   }
 
   loadEvent(page) {

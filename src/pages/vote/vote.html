@@ -1,25 +1,16 @@
 <ion-header>
   <ion-toolbar>
     <ion-title style="text-align: center" >{{people.title}}</ion-title>
+    <button ion-button menuToggle right (click)="reload()"><ion-icon name="settings"></ion-icon></button>
   </ion-toolbar>
 </ion-header>
 <ion-content class="card-background-page">
-  <!-- <ion-card *ngFor="let person of people">
-      <div class="card-title">{{person.title}}</div>
-    <div *ngFor="let img of person?.imgs">
-      <img src="{{img.src}}"/>
-    </div>
-    
-    <div class="card-subtitle">41 Listings</div> -->
-  <!-- </ion-card> --> 
-
   <ion-card *ngFor="let img of people.imgs">
     <a href="{{img.src}}"><img src="{{img.src}}" /></a>
   </ion-card>
 </ion-content>
 <ion-footer>
     <ion-toolbar>
-      
       <ion-buttons >
           <button ion-button icon-only color="royal" (click)= 'loadEvent(-1)' >
             <ion-icon name="search"></ion-icon>
